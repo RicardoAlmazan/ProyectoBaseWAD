@@ -21,6 +21,10 @@ public class Evento implements Serializable {
 
     }
 
+    public Evento(Integer idEvento) {
+        this.idEvento = idEvento;
+    }
+
     public Integer getIdEvento() {
         return idEvento;
     }
