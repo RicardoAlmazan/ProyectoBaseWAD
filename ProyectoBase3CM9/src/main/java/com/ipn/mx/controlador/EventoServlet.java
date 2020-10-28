@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.ipn.mx.modelo.dao.EventoDAO;
 import com.ipn.mx.modelo.dto.Evento;
+import com.ipn.mx.utilities.Utils;
 
 public class EventoServlet extends HttpServlet {
 
@@ -54,8 +55,8 @@ public class EventoServlet extends HttpServlet {
         Evento e = new Evento();
         e.setNombreEvento(request.getParameter("nombreEvento"));
         e.setSede(request.getParameter("sede"));
-        e.setFechaInicio(Date.valueOf(request.getParameter("fechaInicio")));
-        e.setFechaTermino(Date.valueOf(request.getParameter("fechaTermino")));
+        e.setFechaInicio(Utils.convertDate(request.getParameter("fechaInicio")));
+        e.setFechaTermino(Utils.convertDate(request.getParameter("fechaTermino")));
 
         EventoDAO dao = new EventoDAO();
         try {
