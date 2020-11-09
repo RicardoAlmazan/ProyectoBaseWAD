@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="" >
+                    Eventos
+                </a>
+            </nav>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="EventoServlet?accion=listaDeEventos">Lista de eventos <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Registar Evento</div>
+                        <div class="card-body">
+                            <form method="POST" action="EventoServlet?accion=guardar">
+                                <div class="form-group row">
+                                    <label for="nombreEvento" 
+                                           class="col-md-4 col-form-label text-md-right">
+                                        Nombre Evento
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            id="nombreEvento" 
+                                            type="text" 
+                                            class="form-control "
+                                            name="nombreEvento" 
+                                            value="valor demo" 
+                                            required 
+                                            autofocus />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="sede" 
+                                           class="col-md-4 col-form-label text-md-right">
+                                        Sede Evento
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            id="sede" 
+                                            type="text" 
+                                            class="form-control "
+                                            name="sede" 
+                                            value="valor demo" 
+                                            required 
+                                            autofocus />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="fechaInicio" 
+                                           class="col-md-4 col-form-label text-md-right">
+                                        Fecha Inicio
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            class="form-control" 
+                                            type="datetime-local" 
+                                            value="2011-08-19T13:45:00"
+                                            name="fechaInicio"
+                                            id="fechaInicio">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="fechaTermino" 
+                                           class="col-md-4 col-form-label text-md-right">
+                                        Fecha T&eacute;rmino
+                                    </label>
+                                    <div class="col-md-6">
+                                        <input 
+                                            class="form-control" 
+                                            type="datetime-local" 
+                                            value="2011-08-19T13:45:00"
+                                            name="fechaTermino"
+                                            id="fechaTermino">
+                                    </div>
+                                </div>
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary">
+                                            Registrar                                
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    </body>
+</html>
